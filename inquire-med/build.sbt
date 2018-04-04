@@ -8,7 +8,8 @@ libraryDependencies += "net.sf.trove4j" % "trove4j" % "3.0.3"
 
 libraryDependencies ++= Seq(
   "edu.utdallas.hltri" % "medbase" % "1.0.0",
-  "edu.utdallas.hltri" % "insight-wiki" % "1.0.0")
+  "edu.utdallas.hltri" % "insight-wiki" % "1.0.1"
+)
 
 // enable publishing to maven
 publishMavenStyle := true
