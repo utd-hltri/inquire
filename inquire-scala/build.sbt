@@ -6,6 +6,8 @@ version := "0.1"
 
 organization := "edu.utdallas.hltri"
 
+publishTo := sonatypePublishTo.value
+
 // enable publishing to maven
 publishMavenStyle := true
 
@@ -31,6 +33,10 @@ exportJars := true
 
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.7.0"
 
+libraryDependencies += "edu.utdallas.hltri" % "hltri-util" % "1.0.1"
+
+//libraryDependencies += "edu.utdallas.hltri" % "inquire" % "0.1.0"
+
 // Fancy scala resource management
 libraryDependencies += "com.jsuereth" %% "scala-arm" % "1.4"
 
@@ -39,4 +45,4 @@ lazy val `inquire` = RootProject(file(".."))
 lazy val `inquire-scala` = Project(
   id = "inquire-scala",
   base = file("."))
-  .dependsOn(util)
+  .dependsOn(`inquire`)

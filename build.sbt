@@ -8,8 +8,6 @@ organization := "edu.utdallas.hltri"
 
 description := "Information Retrieval (IR) and Question Answering (Q&A) Project"
 
-publishTo := sonatypePublishTo.value
-
 // enable publishing to maven
 publishMavenStyle := true
 
@@ -20,6 +18,7 @@ crossPaths := false
 autoScalaLibrary := false
 
 lazy val commonSettings = Seq(
+  publishTo := sonatypePublishTo.value,
   // Connects STDIN to sbt during forked runs
   connectInput in run := true,
   // Get rid of output prefix
